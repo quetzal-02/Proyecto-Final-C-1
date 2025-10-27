@@ -719,7 +719,7 @@ RESPONSIVE
     background-color: #e05d00;
 }
 
-/* Responsivp */
+/* Responsive */
 @media (max-width: 768px) {
     .contacto-contenedor {
         flex-direction: column;
