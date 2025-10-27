@@ -1,0 +1,636 @@
+/*Aqui podemos poner los roots pero nose*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 🔹HEADER*/
+
+header {
+    background-color: rgb(218, 215, 215);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ff6a00;
+    font-size: 2.2rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6a00;
+    transition: width 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/*🔹::after es el pseudoelemento que agrega la linea debajo */
+
+.menu a:hover {
+    color: #ff6a00;
+}
+
+/*🔹BARRA DE BUSQUEDA IMPROVISADA*/
+.search-box {
+    width: 30%;
+    /* ocupa solo el 30% del espacio disponible */
+    min-width: 170px;
+    /* nunca demasiado pequeña */
+    max-width: 280px;
+    /* nunca demasiado grande */
+    margin: 0 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+/*PARA EL COLOR CUANDO ESCRIBAS*/
+.search-box input:focus {
+    border-color: #ff6a00;
+    box-shadow: 0 0 5px rgba(255, 106, 0, 0.3);
+}
+
+/* ------------------------------
+SECTION INICIO
+  ------------------------------ */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-texto {
+    flex: 1 1 400px;
+}
+
+.hero-texto h2 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.hero-texto p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-naranja {
+    background-color: #ff6a00;
+    color: white;
+}
+
+.btn-naranja:hover {
+    background-color: #e05c00;
+}
+
+.btn-gris {
+    background-color: #e9e9e9;
+    color: #333;
+}
+
+.btn-gris:hover {
+    background-color: #d6d6d6;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+/* 🔹SECCIÓN BENEFICIOS*/
+.beneficios {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 2rem;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    background-color: rgb(248, 245, 33);
+}
+
+.tarjeta img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+    font-size: 1.2rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* 🔹FOOTER */
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.redes a {
+    color: #ff6a00;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.redes a:hover {
+    color: #fff;
+}
+
+/* ------------------------------
+RESPONSIVE
+  ------------------------------ */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------
+---------------------------------SERVICIO TECNICO---------------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------
+   Estructura principal de la sección 
+   --------------------------------------------------------- */
+.seccion-servicio {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido en el eje horizontal */
+    align-items: center;
+    /* Centra en el eje vertical */
+    padding: 2rem;
+}
+
+/* --------------------------------------------------------- */
+/* Contenedor principal que incluye imagen y texto */
+/* display:flex + flex-wrap permite que los elementos salten
+     a la siguiente línea automáticamente cuando no hay espacio */
+/* --------------------------------------------------------- */
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que el bloque-texto baje al reducir el ancho */
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 1000px;
+    gap: 1.5rem;
+    /* Pequeña separación entre imagen y texto */
+}
+
+/* ---------------------------------------------------------   
+     Bloque de imagen 
+     --------------------------------------------------------- */
+.bloque-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Crece y reduce según el espacio disponible */
+}
+
+.bloque-imagen img {
+    width: clamp(250px, 40vw, 380px);
+    /* Imagen adaptable */
+    border-radius: 12px;
+    /* Bordes suaves */
+}
+
+/* ---------------------------------------------------------   
+     Bloque de texto   
+     --------------------------------------------------------- */
+.bloque-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 400px;
+    /* Ocupa el mismo espacio que la imagen cuando hay espacio */
+    text-align: left;
+}
+
+/* Título principal */
+.titulo-servicio {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+/* --------------------------------------------------------- 
+     Contenedores de pasos individuales 
+     --------------------------------------------------------- */
+.paso {
+    display: flex;
+    /* Número + texto alineados horizontalmente */
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+/* Número circular */
+.numero {
+    width: 35px;
+    height: 35px;
+    background-color: #0071e3;
+    color: #ffffff;
+    border-radius: 50%;
+    /* Círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    /* por defecto los elementos flex tienen un flex-shrink:1 lo que
+     hace que cuando el contenedor padre se estire tambien lo haga el elemento */
+}
+
+/* Contenido de cada paso */
+.contenido-paso p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #333333;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+}
+
+/* Enlaces dentro del texto */
+.contenido-paso a {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+.contenido-paso a:hover {
+    text-decoration: underline;
+    /* le devuelve al hipervínculo la decoración de la linea en su texto */
+}
+
+
+
+/* ---------------------------------------------------------   
+   SECCIÓN PRINCIPAL   
+   --------------------------------------------------------- */
+.seccion-centros {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Apila los elementos uno debajo del otro */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+/* ---------------------------------------------------------   
+     BLOQUE DE INTRODUCCIÓN   
+     Contiene los títulos y parrafos descriptivos   
+     --------------------------------------------------------- */
+.bloque-introduccion {
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 2rem;
+}
+
+.titulo-principal {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    /* Tamaño adaptable */
+    color: #222;
+    margin-bottom: 0.8rem;
+}
+
+.texto-secundario {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.texto-descriptivo {
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    color: #333;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+.resaltado {
+    color: #e66b00;
+    /* Color naranja de iShop */
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------   
+    BLOQUE DE CONTENIDO   
+    Agrupa ubicaciones (izquierda) y mapa (derecha)   
+     --------------------------------------------------------- */
+.bloque-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que el mapa baje en pantallas pequeñas */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    /* No se usa flex-gap, solo espaciado con padding/margin(mas corto y recomendable  :p ) */
+}
+
+/* ---------------------------------------------------------   
+   BLOQUE DE UBICACIONES   
+   --------------------------------------------------------- */
+.bloque-ubicaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* NOTA: usar center en estas propiedades hace mas facil y esteticamente siempre se vera mejor */
+}
+
+.subtitulo {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin-bottom: 1.2rem;
+    color: #222;
+}
+
+/* Contenedor de botones de ubicación */
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+}
+
+/* Botones de ciudades */
+.boton-ubicacion {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    /* Bordes redondeados */
+    margin: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton-ubicacion:hover {
+    background-color: #e66b00;
+    color: white;
+}
+
+/* Botón principal */
+.boton-principal {
+    background-color: #e66b00;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #cc5f00;
+}
+
+/* --------------------------------------------------------- */
+/* BLOQUE DE MAPA */
+/* --------------------------------------------------------- */
+.bloque-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa-contenedor {
+    width: clamp(280px, 45vw, 450px);
+    height: clamp(160px, 25vw, 250px);
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+/* El iframe se adapta al contenedor */
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------ACCESORIOS-------------------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------CONTACTO-------------------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+
+
+
+/* ?Inicio cards css */
+.card-grid{
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.card{
+    background-color: var(--color-fondo);
+    border-radius: 0.5em;
+    border: 1px solid var(--color-parrafo);
+    box-shadow: 0px 0px 3px var(--color-sombras);
+
+}
+
+.card-content{
+    padding: 1em;
+}
+
+.card-content a{
+    text-decoration: none;
+}
+.card-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--color-parrafo);
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.card-info{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background-color: var(--color-primario);
+    padding: .5em;
+    text-decoration: none;
+    border-radius: .4em;
+    text-align: center;
+    display: block;
+}
+
+.card-img img{
+    /* object-fit: cover; */
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    width: 100%;
+    height: 180px;
+}
+
+.card-info:hover{
+    color: #082BA5;
+    background-color: green;
+    transition: background-color .5s ease-in-out;
+}
+
+/* ? Fin cards css */
