@@ -562,11 +562,21 @@ RESPONSIVE
 -------------------------------------------------------------------------------------------*/
 
 
-
-
+:root{
+    --color-primario: #d6d4d4;
+    --color-secundario: #082BA5;
+    --color-parrafo: #53575A;
+    --color-titulo: #282D31;
+    --color-fondo: #FCFCFC;
+}
 
 
 /* ?Inicio cards css */
+
+article{
+    padding: 100px;
+}
+
 .card-grid{
     display: grid;
     gap: 1.5em;
@@ -600,7 +610,7 @@ RESPONSIVE
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: #fff;
-    background-color: var(--color-primario);
+    background-color: var(--color-parrafo);
     padding: .5em;
     text-decoration: none;
     border-radius: .4em;
@@ -634,12 +644,52 @@ RESPONSIVE
 -------------------------------------------------------------------------------------------*/
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.contacto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
+form{
+    background-color: var(--color-fondo);
+    padding: 1em;
+    box-shadow: 1px 1px 8px #282d31;
+
+}
+
+label{
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+input{
+    width: 100%;
+    padding: .2em;
+    border: 1px solid var(--color-primario);
+    margin-bottom: .6em;
+}
+
+textarea{
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    border: 1px solid var(--color-primario);
+}
+
+input:hover{
+    color: bisque;
+    background-color: var(--color-primario);
+    transition: background-color .5s ease-in-out;
+}
+
+
+
+.contacto { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 3rem 1rem; 
     background-color: #f9f9f9;
 }
 
